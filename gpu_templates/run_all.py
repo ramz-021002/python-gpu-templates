@@ -7,6 +7,7 @@ from gpu_templates.cupy_template import run_cupy_demo
 from gpu_templates.device_utils import system_info
 from gpu_templates.pytorch_template import run_pytorch_demo
 from gpu_templates.tensorflow_template import run_tensorflow_demo
+from gpu_templates.transformers_template import run_transformers_demo
 
 DemoFunc = Callable[[], Dict[str, object]]
 
@@ -15,6 +16,7 @@ def run_all() -> List[Dict[str, object]]:
     demos: List[DemoFunc] = [
         run_pytorch_demo,
         run_tensorflow_demo,
+        run_transformers_demo,
         run_cupy_demo,
         run_cuml_demo,
     ]
